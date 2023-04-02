@@ -155,4 +155,59 @@ void shift(char input) {
     }
 }
 
+void merge(char input) {
+    if(input == 'W' || input == 'w'){
+        for(int j = 0; j < COLS; j++) {
+            int writeIndex = 0;
+        for(int i = 0; i < ROWS; i++) {
+            if(grid[i][j] != 0) {
+                if(writeIndex > 0 && grid[writeIndex-1][j] == grid[i][j]) {
+                    grid[writeIndex-1][j] *= 2;
+                    grid[i][j] = 0;
+                    
+                } else {
+                    grid[writeIndex][j] = grid[i][j];
+                    if(i != writeIndex) {
+                        grid[i][j] = 0;
+                        
+                    }
+                    writeIndex++;
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+}
+
+        
+    else if(input == 'A' || input == 'a'){
+        for(int i = 0; i < ROWS; i++) {
+            int writeIndex = 0;
+            for(int j = 0; j < COLS; j++) {
+                if(grid[i][j] != 0) {
+                    if(writeIndex > 0 && grid[i][writeIndex-1] == grid[i][j]) {
+                        grid[i][writeIndex-1] *= 2;
+                        grid[i][j] = 0;
+                        
+                    } else {
+                        grid[i][writeIndex] = grid[i][j];
+                        if(j != writeIndex) {
+                            grid[i][j] = 0;
+                            
+                        }
+                        writeIndex++;
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+
     

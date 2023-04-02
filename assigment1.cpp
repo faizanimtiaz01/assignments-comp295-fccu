@@ -277,4 +277,21 @@ int main() {
             cout << "Game over!" << endl;
             break;
         }
+
+        char input;
+        cout << " --- To begin, enter a move - W, A, S, D: ";
+        cin >> input;
+        
+        if (input == 'W' || input == 'w' || input == 'S' || input == 's' || input == 'D' || input == 'd' || input == 'A' || input == 'a'){
+            shift(input);
+            merge(input);
+        }
+        
+        else{
+            cout << "Invalid input. Try again" << endl;
+        }
+    }
+        
+    return 0;
+}
             

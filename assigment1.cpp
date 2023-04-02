@@ -26,3 +26,13 @@ void placeRandomTile() {
         grid[rowIndex][colIndex] = tileValue;
     }
 }
+
+void initGrid() {
+    for(int i = 0; i < ROWS; i++) {
+        for(int j = 0; j < COLS; j++) {
+            grid[i][j] = 0;
+        }
+    }
+    placeRandomTile();
+    placeRandomTile();
+}

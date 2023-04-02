@@ -36,3 +36,14 @@ void initGrid() {
     placeRandomTile();
     placeRandomTile();
 }
+
+
+void printGrid() {
+    cout << endl;
+    for(int i = 0; i < ROWS; i++) {
+        for(int j = 0; j < COLS; j++) {
+            cout << grid[i][j] << "\t";
+        }
+        cout << endl;
+    }
+}

@@ -47,3 +47,29 @@ void printGrid() {
         cout << endl;
     }
 }
+
+
+bool isGameOver() {
+    for(int i = 0; i < ROWS; i++) {
+        for(int j = 0; j < COLS; j++) {
+            if (grid[i][j] == 2048){
+                cout << "Game Won" << endl;
+                return true;
+            }
+        }
+    }
+    for(int i = 0; i < ROWS; i++) {
+        for(int j = 0; j < COLS; j++) {
+            if(grid[i][j] == 0) {
+                return false;
+            }
+            if(i < ROWS-1 && grid[i][j] == grid[i+1][j]) {
+                return false;
+            }
+            if(j < COLS-1 && grid[i][j] == grid[i][j+1]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}

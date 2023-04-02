@@ -73,3 +73,23 @@ bool isGameOver() {
     }
     return true;
 }
+
+
+void shift(char input) {
+    if(input == 'W' || input == 'w'){
+        for(int j = 0; j < COLS; j++) {
+            for(int i = 0; i < ROWS-1; i++) {
+                if(grid[i][j] == 0) {
+                int k = i+1;
+                while(k < ROWS && grid[k][j] == 0) {
+                    k++;
+                }
+                if(k < ROWS) {
+                    grid[i][j] = grid[k][j];
+                    grid[k][j] = 0;
+                }
+            }
+        }
+    }
+    }
+    

@@ -259,4 +259,22 @@ void merge(char input) {
         }
         
     }
+
+    placeRandomTile();
+    system("cls");
+    printGrid();
+}
+
+int main() {
+    srand(time(NULL));
+    initGrid();
     
+    cout << "--- WELCOME TO THE 2048 GAME! Heres your grid ---" << endl;
+    printGrid();
+    while(true) {
+
+        if(isGameOver()) {
+            cout << "Game over!" << endl;
+            break;
+        }
+            

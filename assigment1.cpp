@@ -93,3 +93,66 @@ void shift(char input) {
     }
     }
     
+    else if (input == 'S' || input == 's'){
+        for(int j = 0; j < COLS; j++) {
+            for(int i = ROWS-1; i > 0; i--) {
+                if(grid[i][j] == 0) {
+                int k = i-1;
+                while(k >= 0 && grid[k][j] == 0) {
+                    k--;
+                }
+                if(k >= 0) {
+                grid[i][j] = grid[k][j];
+                grid[k][j] = 0;
+                    
+                }
+                    
+                }
+            }
+        }
+        
+    }
+    
+    else if (input == 'A' || input == 'a'){
+        for(int i = 0; i < ROWS;i++){
+            for(int j = 0; j < COLS-1; j++) {
+                if(grid[i][j] == 0) {
+                int k = j+1;
+                while(k < COLS && grid[i][k] == 0) {
+                    k++;
+                }
+                if(k < COLS) {
+                grid[i][j] = grid[i][k];
+                grid[i][k] = 0;
+                }
+                
+            }
+            
+        }
+            
+        }
+    }
+    else{
+        for(int i = 0; i < ROWS; i++) {
+            for(int j = COLS-1; j > 0; j--) {
+                if(grid[i][j] == 0) {
+                int k = j-1;
+                while(k >= 0 && grid[i][k] == 0) {
+                    k--;
+                    
+                }
+                if(k >= 0) {
+                    grid[i][j] = grid[i][k];
+                    grid[i][k] = 0;
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    }
+}
+
+    

@@ -210,4 +210,53 @@ void merge(char input) {
         
     }
 
+        
+    else if(input == 'S' || input == 's'){
+        for(int j = 0; j < COLS; j++) {
+            int writeIndex = ROWS-1;
+            for(int i = ROWS-1; i >= 0; i--) {
+                if(grid[i][j] != 0) {
+                    if(writeIndex < ROWS-1 && grid[writeIndex+1][j] == grid[i][j]) {
+                        grid[writeIndex+1][j] *= 2;
+                        grid[i][j] = 0;
+                        
+                    } else {
+                        grid[writeIndex][j] = grid[i][j];
+                        if(i != writeIndex) {
+                            grid[i][j] = 0;
+                            
+                        }
+                        writeIndex--;
+                }
+            }
+        }
+    }
+}
+        
+    else{
+        for(int i = 0; i < ROWS; i++) {
+            int writeIndex = COLS-1;
+            for(int j = COLS-1; j >= 0; j--) {
+                if(grid[i][j] != 0) {
+                    if(writeIndex < COLS-1 && grid[i][writeIndex+1] == grid[i][j]) {
+                        grid[i][writeIndex+1] *= 2;
+                        grid[i][j] = 0;
+                        
+                    } else {
+                        grid[i][writeIndex] = grid[i][j];
+                        if(j != writeIndex) {
+                            grid[i][j] = 0;
+                            
+                        }
+                        writeIndex--;
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
     

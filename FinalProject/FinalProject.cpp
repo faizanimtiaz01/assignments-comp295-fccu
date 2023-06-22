@@ -226,6 +226,39 @@ public:
     }
 
     void displayCar() {
-        //display car info
+
     }
 };
+
+
+class Manufacturer {
+private:
+    string name;
+    Car producedCars[];
+
+public:
+    Manufacturer() {
+        name = "";
+    }
+
+    Manufacturer(string name) {
+        this->name = name;
+    }
+
+    void setName(string name) {
+        this->name = name;
+    }
+
+    string getName() {
+        return name;
+    }
+
+    void displayManufacturer() {
+
+    }
+};
+
+int main() {
+
+    return 0;
+}

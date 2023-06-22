@@ -90,3 +90,43 @@ public:
 
     }
 };
+
+class Renter : public Person {
+private:
+    string issuerID;
+
+public:
+    void issueCar() {
+
+    }
+
+    void returnCar() {
+
+    }
+
+    void viewCar(Car car) {
+
+    }
+
+    void searchByManufacturer(Manufacturer manuf) {
+
+    }
+
+    void payFine() {
+
+    }
+};
+
+class RentalCard : public Renter {
+private:
+    Car rentedCars[];
+
+public:
+    RentalCard() {
+
+    }
+
+    void displayRentedCars() {
+
+    }
+};

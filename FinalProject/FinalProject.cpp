@@ -130,3 +130,52 @@ public:
 
     }
 };
+
+class RentalPlace {
+private:
+    string name;
+    string address;
+    RentalWorker workers[];
+    Car lotCars[];
+    Manufacturer carMakers[];
+    Renter renters[];
+
+public:
+    RentalPlace() {
+        name = "";
+        address = "";
+    }
+
+    RentalPlace(string name, string address) {
+        this->name = name;
+        this->address = address;
+    }
+
+    void setName(string name) {
+        this->name = name;
+    }
+
+    void setAddress(string address) {
+        this->address = address;
+    }
+
+    string getName() {
+        return name;
+    }
+
+    string getAddress() {
+        return address;
+    }
+
+    void displayCars() {
+
+    }
+
+    void displayWorkers() {
+
+    }
+
+    void displayRenters() {
+
+    }
+};

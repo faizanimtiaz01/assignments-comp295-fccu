@@ -179,3 +179,53 @@ public:
 
     }
 };
+
+class Car {
+private:
+    string carID;
+    Manufacturer manufacturer;
+    string colour;
+    bool isRented;
+
+public:
+    Car() {
+        carID = "";
+        colour = "";
+        isRented = false;
+    }
+
+    Car(string carID, Manufacturer manufacturer, string colour, bool isRented) {
+        this->carID = carID;
+        this->manufacturer = manufacturer;
+        this->colour = colour;
+        this->isRented = isRented;
+    }
+
+    void setCarID(string carID) {
+        this->carID = carID;
+    }
+
+    void setManufacturer(Manufacturer manufacturer) {
+        this->manufacturer = manufacturer;
+    }
+
+    void setColour(string colour) {
+        this->colour = colour;
+    }
+
+    string getCarID() {
+        return carID;
+    }
+
+    Manufacturer getManufacturer() {
+        return manufacturer;
+    }
+
+    string getColour() {
+        return colour;
+    }
+
+    void displayCar() {
+        //display car info
+    }
+};

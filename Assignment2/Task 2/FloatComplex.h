@@ -20,7 +20,7 @@ public:
     FloatComplex operator*(const FloatComplex& rightHand) const;
     FloatComplex operator/(const FloatComplex& rightHand) const;
 
-    //no getters? because they are inherited from intcomplex, you stupid
+    //no getters? because they are inherited from intcomplex
 };
 
 #endif
